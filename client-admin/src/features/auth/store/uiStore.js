@@ -1,20 +1,20 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 export const useUIStore = create((set) => ({
-    modal: null,
-    confirm: null,
+  modal: null,
+  confirm: null,
 
-    openModal: (tittle, message, onClose) => 
-        set({
-            modal: {tittle, message, onClose}
-        }),
+  openModal: (tittle, message, onClose) =>
+    set({
+      modal: { tittle, message, onClose },
+    }),
 
-    closeModal: () => set({modal: null}),
+  closeModal: () => set({ modal: null }),
 
-    openConfirm: ({tittle, message, onConfirm, onCancel}) =>
-        set({
-            confirm: {tittle, message, onConfirm, onCancel}
-        }),
+  openConfirm: ({ tittle, message, onConfirm, onCancel }) =>
+    set({
+      confirm: { tittle, message, onConfirm, onCancel },
+    }),
 
-    closeConfirm: () => set({confirm: null})
-}))
+  closeConfirm: () => set({ confirm: null }),
+}));
